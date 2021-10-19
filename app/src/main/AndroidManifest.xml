@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.androidstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidStore"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme"
+        tools:targetApi="m">
+        <activity android:name=".activity.CompareActivity"></activity>
+        <activity android:name=".activity.CompareProductActivity" />
+        <activity android:name=".activity.ReviewProduct" />
+        <activity android:name=".activity.SpecificationsProductActivity" />
+        <activity android:name=".activity.ChartActivity" />
+        <activity android:name=".activity.ShowDetailProductActivity" />
+        <activity android:name=".activity.ShowCategoryDetailProduct" />
+        <activity android:name=".activity.DetailCategoryActivity" />
+        <activity android:name=".activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EFEF"
+    android:layoutDirection="rtl"
+    >
+
+    <RelativeLayout
+        android:id="@+id/toolbar_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:isScrollContainer="true"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/close_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_baseline_close_24" />
+
+        <ImageView
+            android:id="@+id/more_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/favorite_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@+id/more_detail_product"
+            android:src="@drawable/ic_baseline_favorite_border_24" />
+
+        <ImageView
+            android:id="@+id/shopping_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@+id/favorite_detail_product"
+            android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_detail_product"
+        android:layout_above="@+id/relative_shop"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager_detail_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout_detail_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewpager_detail_product"
+                    android:layout_centerHorizontal="true"
+                    app:tabBackground="@drawable/bg_tabs"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp" />
+
+                <TextView
+                    android:id="@+id/name_detail_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabLayout_detail_product"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:text="نام محصول:"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/brand_detail_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_detail_product"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:maxLines="1"
+                    android:text="نام برند:"
+                    android:textColor="#182FBA"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                app:cardBackgroundColor="@color/colorBackground"
+                app:cardCornerRadius="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/txt_static2_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="شما با خرید این محصول"
+                        android:textColor="@color/textColor_grey"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/img_static_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_static2_detail_product"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/ic_baseline_card_giftcard_24"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_static2_detail_product"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/img_static_detail_product"
+                        android:text="25 امتیاز در کلاب دریافت میکنید"
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="8dp"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/similar_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:background="@color/colorBackground"
+
+                >
+
+                <TextView
+                    android:id="@+id/text_static_similar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="محصولات مشابه "
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_similar_detail_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_static_similar"                        android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground">
+
+                <TextView
+                    android:id="@+id/txt_static_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="ویژگی های محصول : "
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="8dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_property_detail_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_static_property"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:id="@+id/view1_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_below="@+id/recycler_property_detail_product"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/textColor_grey" />
+
+                <RelativeLayout
+                    android:id="@+id/relative1_specification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1_property"
+                    android:layout_marginTop="16dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/text_Specifications_property_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="مشخصات فنی: "
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_Specifications_property_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+                    <View
+                        android:id="@+id/view1_Specifications_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.75dp"
+                        android:layout_below="@+id/image_Specifications_property_detail_product"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/textColor_grey"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative2_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative1_specification"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/text_review_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="معرفی اجمالی محصول: "
+                        android:textColor="@color/textColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_review_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+                        />
+
+                    <View
+                        android:id="@+id/view1_review_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.75dp"
+                        android:layout_below="@+id/image_review_product"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/textColor_grey"
+
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative_shop"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBackground"
+        android:padding="4dp"
+
+
+        >
+
+        <Button
+            android:id="@+id/btn_buy_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="افزودن به سبد خرید "
+            android:background="@drawable/bg_buy"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="8dp"
+            />
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/elegant_buy_detail_product"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            app:backGroundColor="@color/colorPrimary"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            app:initialNumber="0"
+            app:finalNumber="20"
+            app:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/valueOff_buy_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_txt_value_off"
+            android:paddingHorizontal="6dp"
+            android:textColor="@color/colorBackground"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_priceOff_buy_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/txt_price_buy_detail_product"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/txt_price_buy_detail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_below="@id/valueOff_buy_detail_product"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

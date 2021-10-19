@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="300dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:background="@color/colorBackground">
+
+    <View
+        android:layout_width="0.75dp"
+        android:layout_height="match_parent"
+        android:background="@color/textColor_grey"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        android:id="@+id/img_similar_item_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/name_similar_item_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/img_similar_item_detail_product"
+        android:layout_marginHorizontal="8dp"
+        android:maxLines="2"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/value_offer_similar_item_detail_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_similar_item_detail_product"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_txt_value_off"
+        android:paddingHorizontal="6dp"
+        android:textColor="@color/colorBackground"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="%30" />
+
+    <TextView
+        android:id="@+id/txt_priceOff_similar_item_detail_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text=" 500,000,000 تومان"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/name_similar_item_detail_product"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/txt_price_similar_item_detail_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:text="500,000"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/txt_priceOff_similar_item_detail_product"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        />
+
+</RelativeLayout>

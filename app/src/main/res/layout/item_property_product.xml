@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:background="@color/colorBackground"
+    android:layout_marginBottom="8dp"
+    android:padding="2dp"
+
+    >
+
+        <ImageView
+            android:id="@+id/img_property_product_item"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            app:srcCompat="@drawable/ic_baseline_brightness_1_24"
+            app:tint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_alignParentRight="true"
+
+            />
+        <TextView
+            android:id="@+id/title_property_product_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="صفحات"
+            android:textColor="@color/textColor_grey"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_marginHorizontal="8dp"
+            android:layout_toLeftOf="@+id/img_property_product_item"
+            />
+        <TextView
+            android:id="@+id/detail_property_product_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text=" 122"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/title_property_product_item"
+            />
+
+
+
+</RelativeLayout>

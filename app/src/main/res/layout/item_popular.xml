@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:layoutDirection="rtl"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txt_popular_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="پیشنهادات ویژه"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_below="@id/txt_popular_item"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/img_popular_item"
+        android:layout_width="135dp"
+        android:layout_height="175dp"
+        android:layout_below="@id/view_1"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/name_popular_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/view_1"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/img_popular_item"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/linearLayout_1"
+        android:layout_below="@id/name_popular_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@id/img_popular_item"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_storefront_24"
+
+            />
+        <TextView
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="موجود در انبار"
+            android:layout_gravity="center"
+
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/valueOffer_popular_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout_1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_toLeftOf="@id/img_popular_item"
+        android:background="@drawable/bg_txt_value_off"
+        android:paddingHorizontal="6dp"
+        android:textColor="@color/colorBackground"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="%30" />
+
+    <TextView
+        android:id="@+id/txt_priceOff_popular_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text=" 50,000,000 تومان"
+        android:layout_below="@id/linearLayout_1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        />
+    <TextView
+        android:id="@+id/txt_price_popular_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:text="500,000"
+        android:layout_below="@id/txt_priceOff_popular_item"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/img_popular_item"
+        android:layout_marginTop="8dp"
+        />
+
+</RelativeLayout>

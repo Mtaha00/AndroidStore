@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="4dp"
+    android:layout_marginStart="16dp"
+    android:background="@color/colorBackground"
+    android:elevation="4dp"
+    android:layoutDirection="rtl"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/img_popularAmazing_item"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/name_popularAmazing_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/img_popularAmazing_item"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/value_popularAmazing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_popularAmazing_item"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_txt_value_off"
+            android:paddingHorizontal="6dp"
+            android:textColor="@color/colorBackground"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:text="%30" />
+
+        <TextView
+            android:id="@+id/txt_priceOff_popularAmazing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text=" 50,000,000 تومان"
+            android:layout_below="@id/name_popularAmazing_item"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/txt_price_popularAmazing_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            tools:text="500,000"
+            android:layout_below="@id/txt_priceOff_popularAmazing_item"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

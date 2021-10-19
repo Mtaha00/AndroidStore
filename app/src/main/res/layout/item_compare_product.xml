@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="4dp"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/title_compare_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        tools:text="قابلیت مکالمه"
+        android:textSize="14sp"
+        android:textColor="@color/textColor"
+        android:layout_margin="4dp"
+        />
+    <View
+        android:layout_below="@+id/title_compare_product"
+        android:id="@+id/staticView"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/textColor_grey"
+        android:layout_margin="4dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/title_compare_product"
+
+        >
+
+        <TextView
+            android:id="@+id/firstDetail_compare_product"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            tools:text="قابلیت مکالمه"
+            android:textSize="14sp"
+            android:textColor="@color/textColor_grey"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+
+            />
+        <View
+            android:layout_width="0.75dp"
+            android:layout_height="match_parent"
+            android:background="@color/textColor_grey"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="8dp"
+            />
+
+        <TextView
+            android:id="@+id/secondDetail_compare_product"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            tools:text="قابلیت مکالمه"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="center_horizontal"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
